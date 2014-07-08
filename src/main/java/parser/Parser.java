@@ -13,6 +13,7 @@ import java.util.List;
  */
 public class Parser extends AbstractCompoundTextPart {
     public static final Logger LOGGER = Logger.getLogger(Parser.class);
+/*
     public List<String> parseOnParagraphs(String s) {
         String[] arrParagraphs = s.split("\n");
         List<String> paragraph = new ArrayList<String>();
@@ -22,7 +23,7 @@ public class Parser extends AbstractCompoundTextPart {
 
         return paragraph;
     }
-
+*/
     public List<String> parseOnSentences(String s) {
         String[] arrSentences = s.split("(?<=[.!?])+[\" \"]");
         List<String> listSentences = new ArrayList<String>();
@@ -93,14 +94,15 @@ public class Parser extends AbstractCompoundTextPart {
     public List<Sentence> outSentences(Parser parser, String s) {
         List<String> sentences = parser.parseOnSentences(s);
         Sentence sentenceArrays = new Sentence();
-        List<Sentence>comporableSentencesList=new ArrayList<Sentence>();
+        List<Sentence> comporableSentencesList = new ArrayList<Sentence>();
         for (String sentence : sentences) {
             Sentence comparableSentence = parser.parseSentence(sentence);
-            System.out.println(comparableSentence.toString());
+            LOGGER.info(comparableSentence.toString());
+            // System.out.println(comparableSentence.toString());
             sentenceArrays.setSentences(comparableSentence);
             comporableSentencesList.add(comparableSentence);
         }
-return comporableSentencesList;
+        return comporableSentencesList;
     }
 
     public List<Paragraph> outParagraphs(Parser parser, String s) {
@@ -108,7 +110,7 @@ return comporableSentencesList;
         Paragraph comparableParagraphs = parser.parseParagraph(s);
         paragraphArrays.setParagraphs(comparableParagraphs);
         //System.out.println(comparableParagraphs.getParagraphsPartlist());
-LOGGER.info(comparableParagraphs.getParagraphsPartlist());
+        LOGGER.info(comparableParagraphs.getParagraphsPartlist());
         return comparableParagraphs.getParagraphsPartlist();
     }
 
