@@ -61,26 +61,27 @@ public class Parser extends AbstractCompoundTextPart {
             for (int i = 0; i < arrChars.length; i++) {
                 if (arrChars[i].equals(".")) {
                     symbols.add(new Punctuation('.'));
-                    sentenceParts.add(symbols.get(i));
+                   sentenceParts.add(symbols.get(i));
                 }
-                if (arrChars[i].equals(",")) {
+              else  if (arrChars[i].equals(",")) {
                     symbols.add(new Punctuation(','));
-                    sentenceParts.add(symbols.get(i));
+                   sentenceParts.add(symbols.get(i));
                 }
-                if (arrChars[i].equals("!")) {
+              else  if (arrChars[i].equals("!")) {
                     symbols.add(new Punctuation('!'));
-                    sentenceParts.add(symbols.get(i));
+                   sentenceParts.add(symbols.get(i));
                 }
-                if (arrChars[i].equals("?")) {
+              else  if (arrChars[i].equals("?")) {
                     symbols.add(new Punctuation('?'));
-                    sentenceParts.add(symbols.get(i));
+                   sentenceParts.add(symbols.get(i));
                 }
-                if (arrChars[i].equals(" ")) {
+              else  if (arrChars[i].equals(" ")) {
                     symbols.add(new Whitespace(' '));
-                    sentenceParts.add(symbols.get(i));
-                } else {
+                   sentenceParts.add(symbols.get(i));
+                }
+                else {
                     symbols.add(new Letter(arrChars[i]));
-                    sentenceParts.add(symbols.get(i));
+                   sentenceParts.add(symbols.get(i));
                 }
             }
         }

@@ -42,7 +42,7 @@ public class Sentence<E extends SentencePart> implements CompoundTextPart, TextP
 
     @Override
     public String toString() {
-        return "Sentence:" + sentenceParts;
+        return "\n"+"Sentence:" + sentenceParts;
 
 
     }
