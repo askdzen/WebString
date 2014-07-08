@@ -12,7 +12,7 @@ import java.util.List;
  * Created by Askar on 03.07.2014.
  */
 public class Parser extends AbstractCompoundTextPart {
-    public static final Logger lOGGER = Logger.getLogger(Parser.class);
+    public static final Logger LOGGER = Logger.getLogger(Parser.class);
     public List<String> parseOnParagraphs(String s) {
         String[] arrParagraphs = s.split("\n");
         List<String> paragraph = new ArrayList<String>();
@@ -108,7 +108,7 @@ return comporableSentencesList;
         Paragraph comparableParagraphs = parser.parseParagraph(s);
         paragraphArrays.setParagraphs(comparableParagraphs);
         //System.out.println(comparableParagraphs.getParagraphsPartlist());
-
+LOGGER.info(comparableParagraphs.getParagraphsPartlist());
         return comparableParagraphs.getParagraphsPartlist();
     }
 

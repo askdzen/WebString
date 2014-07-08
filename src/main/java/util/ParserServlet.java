@@ -21,6 +21,7 @@ public class ParserServlet extends HttpServlet {
        List<Paragraph> paragraphs=parser.outParagraphs(parser, request.getParameter("text"));
        List<Sentence> sentences=parser.outSentences(parser, request.getParameter("text"));
 
+        request.setCharacterEncoding("UTF-8");
         request.setAttribute("paragraph",paragraphs);
         request.setAttribute("sentence",sentences);
 
