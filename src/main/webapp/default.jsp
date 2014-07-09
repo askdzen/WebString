@@ -28,7 +28,8 @@
 <p><fmt:message key="inputText"></fmt:message></p>
 
 
-<form action="${pageContext.request.contextPath}/format" method="post">
+
+<form action="${pageContext.request.contextPath}/ws" method="post">
     <textarea rows="30" cols="100" name="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla lectus eu lectus adipiscing pretium. In hac habitasse platea dictumst. Donec turpis tellus, tincidunt sed orci et, venenatis tempor orci. Quisque bibendum pharetra felis et rutrum. Nam luctus leo non tristique auctor. Ut molestie imperdiet lectus, sit amet faucibus felis lobortis feugiat. Curabitur laoreet ultrices arcu ac aliquam. Nunc tristique vestibulum lorem iaculis aliquet. Pellentesque imperdiet metus quis ante hendrerit pretium. Nullam eget dapibus libero, in sollicitudin arcu. Pellentesque malesuada scelerisque risus sit amet lobortis. Pellentesque sagittis eros at felis sollicitudin, at euismod justo hendrerit.
         Nam elit nibh, commodo eu lorem a, dapibus tristique orci. Vestibulum aliquet, elit in commodo tristique, justo ipsum sagittis metus, ut malesuada diam massa vel nisi. Pellentesque condimentum scelerisque augue. Curabitur felis massa, rutrum in fermentum in, adipiscing in arcu. Cras hendrerit consequat auctor. Morbi at volutpat massa. Duis eleifend purus eu ullamcorper viverra. Praesent at volutpat felis. Curabitur lacus enim, scelerisque scelerisque urna quis, posuere faucibus massa. Donec hendrerit ligula nisi, id interdum justo bibendum quis. Maecenas eget commodo libero. Aliquam erat volutpat.
         Fusce sodales elit a egestas tristique. Nam dapibus eu velit id euismod. Curabitur accumsan sem vel posuere feugiat. Morbi molestie arcu adipiscing metus porttitor bibendum. Donec tempor condimentum mattis. Donec sed varius purus, sit amet placerat lacus. Maecenas at eleifend nisl, eget aliquam tortor.
@@ -37,8 +38,11 @@
 
     </textarea>
 
-
-
+    <div id="right">
+        <input type="radio" name="action" value="parse" checked> parse on paragraphs and sentences and sentences parts <br>
+        <input type="radio" name="action" value="parseP"> parse on paragraphs <br>
+        <input type="radio" name="action" value="parseS"> parse on sentences <br>
+    </div>
 
 
 

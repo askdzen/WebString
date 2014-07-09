@@ -1,5 +1,7 @@
 package util;
 
+import action.Action;
+import action.ActionFactory;
 import entity.Paragraph;
 import entity.Sentence;
 import parser.Parser;
@@ -17,15 +19,19 @@ import java.util.List;
 public class ParserServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        Parser parser=new Parser();
-       List<Paragraph> paragraphs=parser.outParagraphs(parser, request.getParameter("text"));
+      /*   Parser parser=new Parser();
+      List<Paragraph> paragraphs=parser.outParagraphs(parser, request.getParameter("text"));
        List<Sentence> sentences=parser.outSentences(parser, request.getParameter("text"));
 
         request.setCharacterEncoding("UTF-8");
         request.setAttribute("paragraph",paragraphs);
-        request.setAttribute("sentence",sentences);
-
-        request.getRequestDispatcher("/WEB-INF/result.jsp").forward(request,response);
+       request.setAttribute("sentence",sentences);
+*/
+        String actionName = request.getParameter("action");
+        Action action = ActionFactory.getAction(actionName);
+        String result = action.execute(request);
+        request.getRequestDispatcher(result).forward(request, response);
+        //request.getRequestDispatcher("/WEB-INF/result.jsp").forward(request,response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -9,11 +9,11 @@
     </welcome-file-list>
 
     <servlet>
-        <servlet-name>formatServlet</servlet-name>
+        <servlet-name>ParserServlet</servlet-name>
         <servlet-class>util.ParserServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>formatServlet</servlet-name>
-        <url-pattern>/format</url-pattern>
+        <servlet-name>ParserServlet</servlet-name>
+        <url-pattern>/ws</url-pattern>
     </servlet-mapping>
 </web-app>
