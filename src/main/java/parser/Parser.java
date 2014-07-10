@@ -24,6 +24,7 @@ public class Parser extends AbstractCompoundTextPart {
         return paragraph;
     }
 */
+
     public List<String> parseOnSentences(String s) {
         String[] arrSentences = s.split("(?<=[.!?])+[\" \"]");
         List<String> listSentences = new ArrayList<String>();

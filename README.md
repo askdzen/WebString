@@ -1,0 +1,2 @@
+The program displays on the output page, the selected item, which parses the text into parts and each part of creates a new object.
+Программа выводит на страницу вывода выбранный элемент, который разбирает текст на части и для каждой части создается новый объект.

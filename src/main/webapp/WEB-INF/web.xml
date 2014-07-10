@@ -14,6 +14,6 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>ParserServlet</servlet-name>
-        <url-pattern>/ws</url-pattern>
+        <url-pattern>/parser</url-pattern>
     </servlet-mapping>
 </web-app>
