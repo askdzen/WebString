@@ -11,18 +11,8 @@ import java.util.Map;
 public class Sentence extends AbstractCompoundTextPart<SentencePart> implements  TextPart {
     @Override
     public String toSourceString() {
-        return super.toSourceString();
+        return "Sentence {"+super.toSourceString()+"} ";
     }
 
-    @Override
-    public String toString() {
-        StringBuilder builder=new StringBuilder();
 
-        for (SentencePart sentencePart : super.getElements()) {
-            builder.append(sentencePart.toSourceString()+sentencePart);
-        }
-
-
-        return builder.toString();
-    }
 }

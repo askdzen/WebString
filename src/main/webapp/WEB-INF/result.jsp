@@ -20,12 +20,12 @@
 <body>
 
 <h1><fmt:message key="text"/></h1>
-<p><%= request.getParameter("text")%></p>
+<pre><%= request.getParameter("text")%></pre>
 
 <div class="tabbable"> <!-- Only required for left/right tabs -->
     <ul class="nav nav-tabs">
-        <li class="active"><a href="#tab1" data-toggle="tab"><fmt:message key="paragraph"/></a></li>
-        <li><a href="#tab2" data-toggle="tab"><fmt:message key="sentence"/></a></li>
+        <li class="active"><a href="#tab1" data-toggle="tab"><fmt:message key="textparsing"/></a></li>
+
     </ul>
     <div class="tab-content">
         <div class="tab-pane active" id="tab1">

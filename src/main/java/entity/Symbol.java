@@ -8,12 +8,13 @@ import java.util.List;
  */
 public abstract class Symbol implements SentencePart {
     private final char value;
-    List<Character>sentenceParts=new ArrayList<>();
+   List<Character>sentenceParts=new ArrayList<>();
 
     protected Symbol(char value) {
         this.value = value;
         sentenceParts.add(value);
     }
+
 
     @Override
     public String toSourceString() {
@@ -25,9 +26,8 @@ public abstract class Symbol implements SentencePart {
     }
 
 
-    public void add(Character element) {
-        sentenceParts.add(element);
+    public char getValue() {
+        return value;
     }
-
 
 }

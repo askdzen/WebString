@@ -15,6 +15,15 @@ public class Punctuation extends Symbol implements TextPart {
 
     }
 
+    @Override
+    public String toString() {
+        return "Punctuation {"+super.getValue()+"} ";
+    }
+
+    @Override
+    public String toSourceString() {
+        return "Punctuation {"+super.getValue()+"} ";
+    }
 }
 
 

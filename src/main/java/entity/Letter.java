@@ -15,7 +15,12 @@ public class Letter extends Symbol {
     }
 
     @Override
+    public String toSourceString() {
+        return "Letter {"+super.getValue()+"} ";
+    }
+
+    @Override
     public String toString() {
-        return super.toString();
+        return "Letter {"+super.getValue()+"} ";
     }
 }

@@ -13,7 +13,13 @@ public class Whitespace extends Symbol {
         super(value);
     }
 
+    @Override
+    public String toSourceString() {
+        return "Whitespace {"+super.getValue()+"} ";
+    }
 
-
-
+    @Override
+    public String toString() {
+        return "Whitespace {"+super.getValue()+"} ";
+    }
 }

@@ -18,13 +18,7 @@ public class AbstractCompoundTextPart<E extends TextPart> implements CompoundTex
         return builder.toString();
     }
 
-    public List<E> getElements() {
-        return elements;
-    }
 
-    public void setElements(List<E> elements) {
-        this.elements = elements;
-    }
 
     @Override
     public void add(E element) {

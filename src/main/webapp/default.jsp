@@ -22,19 +22,7 @@
 
 
     <div class = "container">
-        <ul class="nav pull-left">
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Account
-                    <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                    ...
-                </ul>
-            </li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-        </ul>
+
 
 <p><fmt:message key="inputText"></fmt:message></p>
 
@@ -51,8 +39,7 @@
 
     <div id="right">
         <input type="radio" name="action" value="parse" checked> parse on paragraphs and sentences and sentences parts <br>
-        <input type="radio" name="action" value="parseP"> parse on paragraphs <br>
-        <input type="radio" name="action" value="parseS"> parse on sentences <br>
+
     </div>
 
 

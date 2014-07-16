@@ -9,7 +9,8 @@ import java.util.List;
 public class Paragraph extends AbstractCompoundTextPart<Sentence> implements  TextPart {
 
 
-
-
-
+    @Override
+    public String toSourceString() {
+        return "Paragraph {"+super.toSourceString()+"} ";
+    }
 }

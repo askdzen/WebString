@@ -9,6 +9,5 @@ public interface CompoundTextPart<E extends TextPart> {
     public String toSourceString();
 
 
-    public void add(E element);
-
+    void add(E element);
 }

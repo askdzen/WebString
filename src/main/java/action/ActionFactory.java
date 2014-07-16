@@ -10,8 +10,7 @@ public class ActionFactory {
 
     static {
         actions.put("parse", new ParseAction());
-        actions.put("parseP", new ParseActionOnlyParagraphs());
-        actions.put("parseS", new ParseActionOnlySentences());
+
     }
 
     public static Action getAction(String actionName) {
