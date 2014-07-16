@@ -22,8 +22,19 @@
 
 
     <div class = "container">
-
-
+        <ul class="nav pull-left">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Account
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    ...
+                </ul>
+            </li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+        </ul>
 
 <p><fmt:message key="inputText"></fmt:message></p>
 

@@ -8,53 +8,21 @@ import java.util.Map;
 /**
  * Created by Администратор on 02.07.2014.
  */
-public class Sentence<E extends SentencePart> implements CompoundTextPart, TextPart {
-
-    List<E> sentenceParts = new ArrayList<E>();
-    List<Sentence> sentences = new ArrayList<Sentence>();
-
-    public Sentence() {};
-
-
-
-
-    public Sentence(List<E> sentenceParts) {
-        this.sentenceParts = sentenceParts;
-
-    }
-
-    public List<Sentence> getSentences() {
-        return sentences;
-    }
-
-    public void setSentences(Sentence sentences) {
-
-        this.sentences.add(sentences);
-    }
-
-    public List<E> getSentenceParts() {
-        return sentenceParts;
-    }
-
-    public void setSentenceParts(List<E> sentenceParts) {
-        this.sentenceParts = sentenceParts;
+public class Sentence extends AbstractCompoundTextPart<SentencePart> implements  TextPart {
+    @Override
+    public String toSourceString() {
+        return super.toSourceString();
     }
 
     @Override
     public String toString() {
-        return "\n"+"Sentence:" + sentenceParts;
+        StringBuilder builder=new StringBuilder();
 
-
-    }
-
-    @Override
-    public String toSourceString() {
-        StringBuilder builder = new StringBuilder();
-        for (SentencePart sentencePart : sentenceParts) {
-            builder.append(sentencePart.toSourceString());
+        for (SentencePart sentencePart : super.getElements()) {
+            builder.append(sentencePart.toSourceString()+sentencePart);
         }
+
+
         return builder.toString();
     }
-
-
 }

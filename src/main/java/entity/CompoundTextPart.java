@@ -8,15 +8,7 @@ import java.util.List;
 public interface CompoundTextPart<E extends TextPart> {
     public String toSourceString();
 
-   /*
-    public void add();
 
-    public String get();
-
-    public String find(String text);
-
-
-    public String delete(String text);
-*/
+    public void add(E element);
 
 }

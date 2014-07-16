@@ -9,6 +9,9 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <fmt:bundle basename="i18n.message" prefix="result.">
+
+
+
 <head>
     <title> </title>
     <link rel='stylesheet' href='<%= org.webjars.AssetLocator.getWebJarPath("css/bootstrap.min.css") %>'>
@@ -26,10 +29,10 @@
     </ul>
     <div class="tab-content">
         <div class="tab-pane active" id="tab1">
-            <p>${paragraph}</p>
+            <p>${parsText}</p>
         </div>
         <div class="tab-pane" id="tab2">
-            <p>${sentence}</p>
+
         </div>
     </div>
 </div>
