@@ -11,8 +11,9 @@ public class RegexParser extends AbstractCompoundTextPart implements Parser {
     public static final Logger LOGGER = Logger.getLogger(RegexParser.class);
 
     public static final String PARAGRAPH_MARGIN = "[\r\n]+";
-    private static final String SENTENCE_MARGIN = "(?<=[.!?])+";
-    private static final String SENTENCE_PART_MARGIN = "";
+    private static final String SENTENCE_MARGIN = "(?<=[.!?]+)";
+    private static final String SENTENCE_PART_MARGIN = "(?=[\" \",.]+)";
+    private static final String WORD_PART_MARGIN = "";
 
     public Text parseText(String textSource) {
         Text text = new Text();
@@ -62,13 +63,28 @@ public class RegexParser extends AbstractCompoundTextPart implements Parser {
             } else
 
             {
-                Letter letter = new Letter(itemSource1.charAt(0));
-                sentence.add(letter);
+                String[] splitWord = itemSource1.split(WORD_PART_MARGIN);
+                Word word = new Word();
+                for (String s1 : splitWord) {
+                    if (s1.equals(" ")) {
+                        Whitespace whitespace = new Whitespace(' ');
+                        sentence.add(whitespace);
+                    } else {
+                        Letter letter = new Letter(s1.charAt(0));
+                        word.add(letter);
+                    }
+
+
+                }
+                sentence.add(word);
             }
+
+
         }
-        //System.out.println(sentence.toString());
         return sentence;
+
     }
 
-
 }
+
+

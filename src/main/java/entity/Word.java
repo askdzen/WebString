@@ -1,18 +1,20 @@
 package entity;
 
+import com.sun.org.apache.xpath.internal.operations.*;
+
+import java.lang.String;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Администратор on 02.07.2014.
  */
-public class Word extends AbstractCompoundTextPart<Letter> implements SentencePart  {
+public class Word extends AbstractCompoundTextPart<SentencePart> implements SentencePart  {
 
-    private SentencePart element;
+
 
     @Override
     public String toSourceString() {
-        return null;
+        return "Word {"+super.toSourceString()+"}";
     }
-
-
-
-
 }
